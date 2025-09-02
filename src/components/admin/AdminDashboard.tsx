@@ -147,18 +147,18 @@ const AdminDashboard = ({ admin, onLogout }: AdminDashboardProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-primary/5 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* Header */}
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
-            <p className="text-muted-foreground">Welcome back, {admin.name}</p>
+            <h1 className="text-4xl font-poppins font-bold text-foreground">Admin Dashboard</h1>
+            <p className="text-muted-foreground text-lg mt-2">Welcome back, {admin.name}</p>
           </div>
-          <Button variant="outline" onClick={onLogout} className="flex items-center space-x-2">
+          <Button variant="outline" onClick={onLogout} className="flex items-center space-x-2 border-2 hover:bg-primary hover:text-white">
             <LogOut className="h-4 w-4" />
-            <span>Logout</span>
+            <span className="font-medium">Logout</span>
           </Button>
         </div>
 
@@ -321,7 +321,7 @@ const AdminDashboard = ({ admin, onLogout }: AdminDashboardProps) => {
                               <MoreHorizontal className="h-4 w-4" />
                             </Button>
                           </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end">
+                          <DropdownMenuContent align="end" className="bg-white border border-border shadow-strong z-50">
                             <DropdownMenuItem onClick={() => handleAction('view', student.id, student.name)}>
                               <Eye className="h-4 w-4 mr-2" />
                               View Details

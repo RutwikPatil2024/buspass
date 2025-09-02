@@ -115,7 +115,7 @@ const ConductorScanner = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-primary/5 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-4xl mx-auto space-y-6">
         
         {/* Header */}
@@ -123,8 +123,8 @@ const ConductorScanner = () => {
           <div className="mx-auto w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-4 shadow-glow">
             <Scan className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-foreground">Conductor Scanner</h1>
-          <p className="text-muted-foreground">Verify student bus passes quickly and easily</p>
+          <h1 className="text-4xl font-poppins font-bold text-foreground">Conductor Scanner</h1>
+          <p className="text-muted-foreground text-lg mt-2">Verify student bus passes quickly and easily</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

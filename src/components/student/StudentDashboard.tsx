@@ -125,22 +125,22 @@ const StudentDashboard = ({ student, onLogout, onShowPlans }: StudentDashboardPr
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-primary/5 p-4">
-      <div className="max-w-4xl mx-auto space-y-6">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="w-full max-w-4xl">
         
         {/* Header */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-start mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-foreground">Welcome back, {student.name}!</h1>
-            <p className="text-muted-foreground">Manage your bus pass and travel safely</p>
+            <h1 className="text-4xl font-poppins font-bold text-foreground">Welcome back, {student.name}!</h1>
+            <p className="text-muted-foreground text-lg mt-2">Manage your bus pass and travel safely</p>
           </div>
-          <Button variant="outline" onClick={onLogout} className="flex items-center space-x-2">
+          <Button variant="outline" onClick={onLogout} className="flex items-center space-x-2 border-2 hover:bg-primary hover:text-white">
             <LogOut className="h-4 w-4" />
-            <span>Logout</span>
+            <span className="font-medium">Logout</span>
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Bus Pass Card */}
           <div className="lg:col-span-2">

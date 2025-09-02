@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Shield, Lock, User } from "lucide-react";
+import { Shield } from "lucide-react";
 
 interface AdminLoginProps {
   onLogin: (adminData: any) => void;
@@ -41,56 +39,51 @@ const AdminLogin = ({ onLogin }: AdminLoginProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-primary/5 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="mx-auto w-16 h-16 bg-gradient-to-r from-primary to-destructive rounded-2xl flex items-center justify-center mb-4 shadow-glow">
             <Shield className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Admin Portal</h1>
-          <p className="text-muted-foreground">Secure access to system management</p>
+          <h1 className="text-3xl font-poppins font-bold text-foreground">Admin Portal</h1>
+          <p className="text-muted-foreground text-lg">Secure access to system management</p>
         </div>
 
-        <Card className="card-elevated border-0">
+        <Card className="card-elevated border-0 shadow-strong">
           <CardHeader className="text-center">
-            <CardTitle className="text-xl">Administrator Login</CardTitle>
-            <CardDescription>
+            <CardTitle className="text-xl font-poppins">Administrator Login</CardTitle>
+            <CardDescription className="text-base">
               Enter your credentials to access the admin dashboard
             </CardDescription>
           </CardHeader>
           
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="username" className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span>Username</span>
-                </Label>
-                <Input
+              <div className="form-group">
+                <input
                   id="username"
+                  type="text"
                   placeholder="Enter admin username"
                   value={loginForm.username}
                   onChange={(e) => setLoginForm({...loginForm, username: e.target.value})}
-                  className="h-12"
+                  className="form-input"
                 />
+                <label htmlFor="username" className="form-label">Username</label>
               </div>
               
-              <div className="space-y-2">
-                <Label htmlFor="password" className="flex items-center space-x-2">
-                  <Lock className="h-4 w-4" />
-                  <span>Password</span>
-                </Label>
-                <Input
+              <div className="form-group">
+                <input
                   id="password"
                   type="password"
                   placeholder="Enter admin password"
                   value={loginForm.password}
                   onChange={(e) => setLoginForm({...loginForm, password: e.target.value})}
-                  className="h-12"
+                  className="form-input"
                 />
+                <label htmlFor="password" className="form-label">Password</label>
               </div>
 
-              <Button type="submit" className="w-full h-12 btn-hero text-base">
+              <Button type="submit" className="w-full h-12 btn-hero text-base font-medium">
                 <Shield className="h-4 w-4 mr-2" />
                 Access Admin Panel
               </Button>

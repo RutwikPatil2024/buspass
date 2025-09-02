@@ -2,121 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Student Bus Pass System Design System */
+/* Student Bus Pass System Design System - Blue & White Theme */
 
 @layer base {
   :root {
-    /* Core Colors */
-    --background: 240 15% 98%;
-    --foreground: 215 25% 15%;
+    /* Pure Blue & White Color Scheme */
+    --background: 0 0% 100%;
+    --foreground: 220 25% 15%;
     
-    /* Cards */
+    /* Cards - Pure White */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 25% 15%;
     
-    /* Education Blue Theme */
+    /* Primary Blue Shades */
     --primary: 217 91% 55%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 217 91% 65%;
     --primary-dark: 217 91% 45%;
+    --primary-50: 217 91% 95%;
+    --primary-100: 217 91% 90%;
     
-    /* Success Green */
-    --success: 142 76% 45%;
+    /* Secondary Blues */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 25% 25%;
+    --muted: 220 15% 98%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 217 20% 94%;
+    --accent-foreground: 220 25% 25%;
+    
+    /* Success - Clean Blue-Green */
+    --success: 200 95% 45%;
     --success-foreground: 0 0% 100%;
-    --success-light: 142 76% 55%;
+    --success-light: 200 95% 55%;
     
-    /* Warning/Alert */
-    --warning: 45 93% 50%;
-    --warning-foreground: 215 25% 15%;
+    /* Warning - Soft Blue */
+    --warning: 45 95% 50%;
+    --warning-foreground: 220 25% 15%;
     
-    /* Error */
-    --destructive: 0 84% 60%;
+    /* Error - Blue-Red */
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Neutral Tones */
-    --secondary: 217 12% 94%;
-    --secondary-foreground: 215 25% 25%;
-    --muted: 217 12% 96%;
-    --muted-foreground: 215 15% 55%;
-    --accent: 217 25% 92%;
-    --accent-foreground: 215 25% 25%;
-    
     /* Form Elements */
-    --border: 217 20% 88%;
-    --input: 217 20% 94%;
+    --border: 220 20% 88%;
+    --input: 220 15% 96%;
     --ring: 217 91% 55%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(217 91% 45%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 55%) 0%, hsl(142 76% 45%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(217 12% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%) 0%, hsl(217 91% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 55%) 0%, hsl(200 95% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(217 20% 96%) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(217 25% 15% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(217 25% 15% / 0.12);
-    --shadow-strong: 0 8px 32px hsl(217 25% 15% / 0.16);
-    --shadow-glow: 0 0 24px hsl(217 91% 55% / 0.2);
+    --shadow-soft: 0 2px 8px hsl(217 25% 15% / 0.05);
+    --shadow-medium: 0 4px 16px hsl(217 25% 15% / 0.08);
+    --shadow-strong: 0 8px 32px hsl(217 25% 15% / 0.12);
+    --shadow-glow: 0 0 24px hsl(217 91% 55% / 0.15);
+    
+    /* Radius */
+    --radius: 12px;
+    
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
     
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 25% 8%;
+    --foreground: 0 0% 98%;
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 25% 8%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 217 20% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 18%;
+    --input: 220 15% 15%;
+    --ring: 217 91% 65%;
   }
 }
 
@@ -126,62 +101,98 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
   }
 }
 
 @layer components {
+  /* Fixed Form Floating Labels */
+  .form-group {
+    @apply relative mb-6;
+  }
+  
+  .form-input {
+    @apply w-full h-12 px-4 pt-6 pb-2 bg-white border-2 border-border rounded-lg transition-all duration-200 text-foreground placeholder-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+  }
+  
+  .form-label {
+    @apply absolute left-4 top-4 text-muted-foreground text-sm transition-all duration-200 pointer-events-none select-none;
+  }
+  
+  .form-input:focus + .form-label,
+  .form-input:not(:placeholder-shown) + .form-label {
+    @apply top-2 text-xs text-primary font-medium;
+  }
+  
+  .form-input::placeholder {
+    @apply opacity-0;
+  }
+
   /* Custom Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-success text-white shadow-lg hover:shadow-glow transform hover:scale-[1.02] transition-all duration-300;
+    @apply bg-gradient-primary text-white shadow-medium hover:shadow-glow transform hover:scale-[1.02] transition-all duration-300 font-medium;
   }
   
   .btn-success {
-    @apply bg-success hover:bg-success-light text-success-foreground shadow-soft;
+    @apply bg-success hover:bg-success-light text-success-foreground shadow-soft font-medium;
   }
   
-  .btn-warning {
-    @apply bg-warning hover:bg-warning/90 text-warning-foreground;
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground shadow-soft font-medium;
   }
 
   /* Card Styles */
   .card-elevated {
-    @apply bg-gradient-to-br from-card to-accent/30 shadow-medium hover:shadow-strong transition-all duration-300;
+    @apply bg-white shadow-medium hover:shadow-strong transition-all duration-300 border border-border/50;
   }
   
   .card-pass {
-    @apply bg-gradient-to-br from-primary/5 to-success/5 border-2 border-primary/20 shadow-medium;
+    @apply bg-gradient-subtle border-2 border-primary/20 shadow-medium;
   }
 
   /* Status Badges */
   .status-valid {
-    @apply bg-success/10 text-success border border-success/20 rounded-full px-3 py-1 text-sm font-medium;
+    @apply bg-success/10 text-success border border-success/30 rounded-full px-3 py-1 text-sm font-medium;
   }
   
   .status-invalid {
-    @apply bg-destructive/10 text-destructive border border-destructive/20 rounded-full px-3 py-1 text-sm font-medium;
+    @apply bg-destructive/10 text-destructive border border-destructive/30 rounded-full px-3 py-1 text-sm font-medium;
   }
   
   .status-pending {
-    @apply bg-warning/10 text-warning-foreground border border-warning/20 rounded-full px-3 py-1 text-sm font-medium;
+    @apply bg-warning/10 text-warning-foreground border border-warning/30 rounded-full px-3 py-1 text-sm font-medium;
   }
 
   /* QR Code Container */
   .qr-container {
-    @apply p-4 bg-white rounded-xl shadow-medium border-4 border-primary/10;
+    @apply p-6 bg-white rounded-2xl shadow-medium border-2 border-primary/10;
   }
 
-  /* Form Enhancements */
-  .form-floating {
-    @apply relative;
+  /* Navigation Enhancements */
+  .nav-gradient {
+    @apply bg-gradient-hero;
   }
-  
-  .form-floating input:focus + label,
-  .form-floating input:not(:placeholder-shown) + label {
-    @apply transform -translate-y-6 scale-75 text-primary;
+
+  /* Input Focus States */
+  .input-focus {
+    @apply focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
   }
-  
-  .form-floating label {
-    @apply absolute left-3 top-3 text-muted-foreground transition-all duration-200 pointer-events-none;
+
+  /* Dropdown Menu Fixes */
+  .dropdown-content {
+    @apply bg-white border border-border shadow-strong z-50;
+  }
+
+  /* Enhanced DropdownMenu styling */
+  [data-radix-popper-content-wrapper] {
+    z-index: 50 !important;
+  }
+
+  [role="menu"] {
+    @apply bg-white border border-border shadow-strong z-50;
   }
 }

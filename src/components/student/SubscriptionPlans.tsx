@@ -100,7 +100,7 @@ const SubscriptionPlans = ({ onBack, onPurchase }: SubscriptionPlansProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/20 to-primary/5 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}
@@ -111,11 +111,11 @@ const SubscriptionPlans = ({ onBack, onPurchase }: SubscriptionPlansProps) => {
             className="mb-4 flex items-center space-x-2 hover:bg-primary/10"
           >
             <ArrowLeft className="h-4 w-4" />
-            <span>Back to Dashboard</span>
+            <span className="font-medium">Back to Dashboard</span>
           </Button>
           
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Choose Your Pass</h1>
+            <h1 className="text-5xl font-poppins font-bold text-foreground mb-4">Choose Your Pass</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Select the perfect bus pass plan for your travel needs. All plans include unlimited rides 
               and work on all city routes.
@@ -191,15 +191,15 @@ const SubscriptionPlans = ({ onBack, onPurchase }: SubscriptionPlansProps) => {
                 </div>
 
                 {/* Purchase Button */}
-                <Button 
-                  onClick={() => handlePurchase(plan.id, plan.name)}
-                  className={`w-full mt-6 ${
-                    plan.recommended || plan.popular 
-                      ? 'btn-hero shadow-glow' 
-                      : 'btn-success'
-                  }`}
-                  size="lg"
-                >
+                  <Button 
+                    onClick={() => handlePurchase(plan.id, plan.name)}
+                    className={`w-full mt-6 font-medium ${
+                      plan.recommended || plan.popular 
+                        ? 'btn-hero shadow-glow' 
+                        : 'btn-success'
+                    }`}
+                    size="lg"
+                  >
                   <Clock className="h-4 w-4 mr-2" />
                   Purchase Now
                 </Button>
